@@ -260,8 +260,10 @@ body {
 }
 
 .avatar-img {
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
   border-radius: 50%;
   object-fit: cover;
   display: block;
