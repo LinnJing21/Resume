@@ -194,6 +194,23 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  const awardsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll('.award-card');
+        cards.forEach(card => {
+          card.classList.add('animate-in');
+        });
+        awardsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const awardsSection = document.getElementById('awards');
+  if (awardsSection) {
+    awardsObserver.observe(awardsSection);
+  }
+
   const navbar = document.querySelector('.navbar');
   let lastScroll = 0;
 
