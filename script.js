@@ -21,9 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
+      const href = link.getAttribute('href');
+      const targetSection = document.querySelector(href);
+      if (targetSection) {
+        const index = parseInt(targetSection.getAttribute('data-index'));
+        if (!isNaN(index)) {
+          scrollToSection(index);
+        }
+      }
     });
   });
 
@@ -140,20 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window._touchStartY = null;
   }, { passive: true });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const href = link.getAttribute('href');
-      const targetSection = document.querySelector(href);
-      if (targetSection) {
-        const index = parseInt(targetSection.getAttribute('data-index'));
-        if (!isNaN(index)) {
-          scrollToSection(index);
-        }
-      }
-    });
-  });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

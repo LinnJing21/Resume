@@ -887,25 +887,25 @@ body {
 
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: none;
+    scroll-snap-type: y mandatory;
   }
 
   .page-wrapper {
-    scroll-snap-type: none;
-    overflow-y: auto;
-    height: auto;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
   }
 
   .section {
-    min-height: auto;
-    height: auto;
-    scroll-snap-align: none;
+    min-height: 100vh;
+    height: 100vh;
+    scroll-snap-align: start;
   }
 
   .hero {
     min-height: 100vh;
-    height: auto;
-    scroll-snap-align: none;
+    height: 100vh;
+    scroll-snap-align: start;
   }
 
   .section-content {
@@ -949,6 +949,7 @@ body {
 
   .hero {
     padding: 100px 20px 60px;
+    overflow-y: auto;
   }
 
   .hero-title {
@@ -965,6 +966,7 @@ body {
 
   .section {
     padding: 60px 0;
+    overflow-y: auto;
   }
 
   .section-title {
