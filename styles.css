@@ -963,7 +963,7 @@ body {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 120px 0 60px;
     overflow-y: auto;
   }
 
