@@ -963,8 +963,10 @@ body {
   }
 
   .section {
+    min-height: auto;
+    height: auto;
     padding: 160px 0 60px;
-    overflow-y: auto;
+    display: block;
   }
 
   .section-content {
