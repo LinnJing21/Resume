@@ -887,23 +887,23 @@ body {
 
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
   }
 
   .page-wrapper {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+    scroll-snap-type: none;
+    overflow-y: auto;
+    height: auto;
   }
 
   .section {
-    min-height: 100vh;
-    scroll-snap-align: start;
+    min-height: auto;
+    scroll-snap-align: none;
   }
 
   .hero {
     min-height: 100vh;
-    scroll-snap-align: start;
+    scroll-snap-align: none;
   }
 
   .section-content {
@@ -916,7 +916,7 @@ body {
   }
 
   .section-content {
-    padding: 0 20px;
+    padding: 20px 20px 0;
   }
 
   .nav-menu {
@@ -963,8 +963,12 @@ body {
   }
 
   .section {
-    padding: 140px 0 60px;
+    padding: 160px 0 60px;
     overflow-y: auto;
+  }
+
+  .section-content {
+    padding: 20px 20px 0;
   }
 
   .section-title {
