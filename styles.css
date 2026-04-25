@@ -240,6 +240,8 @@ body {
 
 .hero-avatar {
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .avatar-placeholder {
@@ -250,11 +252,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   font-size: 32px;
   font-weight: 700;
   color: var(--bg-primary);
   border: 3px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .avatar-img {
@@ -263,8 +265,8 @@ body {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
   border: 3px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .hero-greeting {
